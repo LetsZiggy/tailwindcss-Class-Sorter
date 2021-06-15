@@ -1,0 +1,73 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "root",
+      "folder_exclude_patterns": [ ".svn", ".git", ".hg", "CVS", "venv", "__pycache__", "order-list-generator" ],
+      "follow_symlinks": true,
+    },
+    {
+      "path": "order-list-generator",
+      "name": "order-list-generator",
+      "folder_exclude_patterns": [ "node_modules" ],
+      "follow_symlinks": true,
+    },
+  ],
+  "settings": {
+    /*"default_encoding": "UTF-8",*/
+    /*"default_line_ending": "unix",*/
+    "detect_indentation": false,
+    /*"ensure_newline_at_eof_on_save": true,*/
+    "show_definitions": false,
+    "show_line_endings": true,
+    /*"tab_size": 2,*/
+    /*"translate_tabs_to_spaces": true,*/
+    /*"trim_trailing_white_space_on_save": true,*/
+    "use_tab_stops": true,
+    "word_wrap": true,
+
+    /* sublack */
+    "sublack": {
+      "black_command": "${folder}/venv/bin/black",
+      "black_target_version": [ "py38" ],
+    },
+
+    /* SublimeLinter */
+    /* SublimeLinter-pylint */
+    "SublimeLinter.linters.pylint.disable": false,
+    "SublimeLinter.linters.pylint.python": "${folder}/venv/bin/python",
+    "SublimeLinter.linters.pylint.working_dir": "${folder:$file_path}",
+    "SublimeLinter.linters.pylint.executable": "${folder}/venv/bin/pylint",
+    "SublimeLinter.linters.pylint.args": [ "--rcfile=${folder}/pyproject.toml", "--load-plugins=pylint_quotes" ],
+    "SublimeLinter.linters.pylint.lint_mode": "load_save",
+    "SublimeLinter.linters.pylint.selector": "source.python",
+
+    /* LSP */
+    // "lsp_format_on_save": true,
+    "lsp_code_actions_on_save": {
+      /* "source.fixAll.json": true, */
+      "source.fixAll.eslint": true,
+    },
+
+    "LSP": {
+      /* LSP-eslint */
+      "LSP-eslint": {
+        "enabled": true,
+        "settings": {
+          "probe": [ "javascript" ],
+          "validate": [ "javascript" ],
+          "workingDirectories": [ "${folder}/order-list-generator" ],
+        },
+      },
+
+      /* LSP-pyright */
+      "LSP-pyright": {
+        "enabled": true,
+        "settings": {
+          "python.pythonPath": "${folder}/venv/bin/python",
+          "python.venvPath": "${folder}/venv",
+        },
+      },
+    },
+  },
+}
