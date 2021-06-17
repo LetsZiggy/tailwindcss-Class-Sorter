@@ -1,0 +1,42 @@
+{
+  "name": "tailwindcss-class-sorter",
+  "description": "tailwindcss Class Sorter",
+  "version": "0.1.0",
+  "contributors": [
+    "Shafiq Tahir <shafiqtahir.khan@gmail.com>"
+  ],
+  "scripts": {
+    "generate-css": "NODE_ENV=development node_modules/.bin/tailwindcss -i ./tailwind.css -c ./tailwind.config.js -o ./style.css && node prepare-css.js",
+    "generate-order-lists": "node generate-order-list.js"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "engines": {
+    "node": ">=10.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-env": "^7.16.8",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^7",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.0.0",
+    "eslint-plugin-unicorn": "^40.1.0",
+    "postcss": "^8.4.12",
+    "stylelint": "^14.6.0",
+    "stylelint-config-concentric-order": "^5.0.0",
+    "stylelint-config-property-sort-order-smacss": "^9.0.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-order": "^5.0.0",
+    "tailwindcss": "^3.0.15"
+  },
+  "peerDependencies": {
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.0.0"
+  }
+}
