@@ -1,0 +1,18 @@
+{
+  "schema_version": "3.0.0",
+
+  "packages": [
+    {
+      "name": "tailwindcss-Class-Sorter",
+      "details": "https://github.com/LetsZiggy/tailwindcss-Class-Sorter",
+      "issues": "https://github.com/LetsZiggy/tailwindcss-Class-Sorter/issues",
+      "readme": "https://raw.githubusercontent.com/LetsZiggy/tailwindcss-Class-Sorter/main/README.md",
+      "releases": [
+        {
+          "sublime_text": ">=3000",
+          "tags": true
+        }
+      ]
+    }
+  ]
+}

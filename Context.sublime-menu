@@ -1,0 +1,8 @@
+[
+  {
+    "caption": "tailwindcss Class Sorter",
+    "children": [
+      { "caption": "Format This File", "command": "sort_tailwindcss" },
+    ],
+  },
+]

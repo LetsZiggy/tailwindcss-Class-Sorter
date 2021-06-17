@@ -1,0 +1,52 @@
+[
+  {
+    "caption": "Tools",
+    "mnemonic": "T",
+    "id": "tools",
+    "children": [
+      {
+        "id": "tailwindcssclasssorter_tools",
+        "caption": "tailwindcss Class Sorter",
+        "children": [
+          { "command": "sort_tailwindcss", "caption": "Format This File", "mnemonic": "F" },
+        ],
+      },
+    ],
+  },
+  {
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children": [
+      {
+        "id": "package-settings",
+        "children": [
+          {
+            "caption": "tailwindcss Class Sorter",
+            "children": [
+              {
+                "command": "edit_settings",
+                "caption": "Settings",
+                "args": {
+                  "base_file": "${packages}/tailwindcss-Class-Sorter/tailwindcss-Class-Sorter.sublime-settings",
+                  "default": "// Settings in here override those in \"tailwindcss-class-sorter/tailwindcss-Class-Sorter.sublime-settings\",\n\n{\n\t$0\n}\n",
+                },
+              },
+              {
+                "caption": "-",
+              },
+              {
+                "command": "edit_settings",
+                "caption": "Key Bindings",
+                "args": {
+                  "base_file": "${packages}/tailwindcss-Class-Sorter/Default ($platform).sublime-keymap",
+                  "default": "[\n\t$0\n]\n",
+                },
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]
