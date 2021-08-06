@@ -1,0 +1,5 @@
+order-list-generator/* export-ignore
+editor.sublime-project export-ignore
+pyproject.toml export-ignore
+requirements.txt export-ignore
+.editorconfig export-ignore
