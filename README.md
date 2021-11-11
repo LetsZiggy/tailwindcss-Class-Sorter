@@ -32,6 +32,10 @@
 #### Command palette:
 
 - `tailwindcss Class Sorter: Format this file`
+- `tailwindcss Class Sorter: Get Group Index List`
+  - Prints current state of [order_list] with index to `Console Panel` (Default: `` Primary + ` ``)
+  - Eg: [[index, group_name], ...]
+  - For "group_name", see below - [edit_order](#user-content-default-settings)
 
 #### Shortcut key:
 

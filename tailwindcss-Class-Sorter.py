@@ -352,6 +352,22 @@ class SortTailwindcssCommand(sublime_plugin.TextCommand):
     return ":".join(class_variants)
 
 
+class GetGroupIndexListTailwindcssCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    try:
+      # Get order_type and apply "edit_order"
+      [order_list, order_group_name_list] = PluginUtils.get_order(self.view, True)
+
+      advice = """============================================================================================================
+| Actions are implemented sequentially. Indexes may change after an action has been added to 'edit_order'. |
+|  It may affect subsequent actions. It is recommended to re-run this command after adding every action.   |
+============================================================================================================"""
+
+      print(order_group_name_list, advice, sep="\n\n")
+    except:
+      print(sys.exc_info())
+
+
 class TailwindcssClassSorterEventListeners(sublime_plugin.EventListener):
   @staticmethod
   def should_run_command(view):
@@ -425,7 +441,7 @@ class PluginUtils:
     return value
 
   @staticmethod
-  def get_order(view):
+  def get_order(view, to_enumerate=False):
     order_type = PluginUtils.get_pref(["order_type"], view)
     order_json = json.loads(sublime.load_resource(sublime.find_resources("order_list.json")[0]))
     order_list = order_json[order_type]
@@ -472,6 +488,10 @@ class PluginUtils:
           + order_list[append_index:]
         )
 
-    order_group_name_list = list(map(lambda x: x[0], order_list))
+    order_group_name_list = (
+      list(map(lambda x: x[0], order_list))
+      if to_enumerate == False
+      else list(map(lambda x: [x[0], x[1][0]], enumerate(order_list)))
+    )
 
     return [order_list, order_group_name_list]

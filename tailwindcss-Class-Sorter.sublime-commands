@@ -1,3 +1,4 @@
 [
   { "caption": "tailwindcss Class Sorter: Format this file", "command": "sort_tailwindcss" },
+  { "caption": "tailwindcss Class Sorter: Get Group Index List", "command": "get_group_index_list_tailwindcss" },
 ]

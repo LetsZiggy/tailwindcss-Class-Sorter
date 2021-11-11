@@ -3,6 +3,7 @@
     "caption": "tailwindcss Class Sorter",
     "children": [
       { "caption": "Format This File", "command": "sort_tailwindcss" },
+      { "caption": "Get Group Index List", "command": "get_group_index_list_tailwindcss" },
     ],
   },
 ]

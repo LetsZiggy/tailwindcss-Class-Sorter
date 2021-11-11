@@ -9,6 +9,7 @@
         "caption": "tailwindcss Class Sorter",
         "children": [
           { "command": "sort_tailwindcss", "caption": "Format This File", "mnemonic": "F" },
+          { "command": "get_group_index_list_tailwindcss", "caption": "Get Group Index List", "mnemonic": "G" },
         ],
       },
     ],
